@@ -16,6 +16,6 @@ Year: 2000
 Note:
 - Program must be written in C++
 - Use setter functions to assign values to class objects
-- Accept name (firstname), age and country in order only
+- Accept company, model and year in order only
 
 */
