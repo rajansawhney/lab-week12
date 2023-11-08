@@ -1,19 +1,13 @@
-CC = gcc
+CC = g++
 
-write_txt: write_txt.c
-	gcc write_txt.c -o write_txt
+person: person.cpp
+	g++ person.cpp -o person
 
-read_txt: read_txt.c
-	gcc read_txt.c -o read_txt
-
-write_binary: write_binary.c
-	gcc write_binary.c -o write_binary
-
-read_binary: read_binary.c
-	gcc read_binary.c -o read_binary
+car: car.cpp
+	g++ car.cpp -o car
 
 clean:
-	rm write_txt read_txt write_binary read_binary lab11.txt lab11.bin
+	rm person car
 
-test: write_txt read_txt write_binary read_binary
+test: person car 
 	bash test.sh
