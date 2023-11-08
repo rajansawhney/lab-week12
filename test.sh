@@ -8,7 +8,7 @@ output_person=$(./person < test/input_person.txt)
 echo $output_person
 expected_output_person="Name: Minerva
 Age: 55
-Country: Scotland"
+Country: Scotland"| tr -d '\r'
 
 if [ $? -eq 0 ] ; then
   echo "Pass: Program exited zero"
@@ -40,7 +40,7 @@ fi
 
 expected_output_car="Company: LandRover
 Model: Defender
-Year: 2000"
+Year: 2000"| tr -d '\r'
 
 
 if [[ $output_car == *$expected_output_car* ]] ; then
